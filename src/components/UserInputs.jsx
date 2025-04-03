@@ -1,57 +1,40 @@
-import { useState } from "react";
 import Input from "./Input";
 
-export default function UserInputs({ initialUserInput, onInputValueChange }) {
-  const [inputValues, setInputValues] = useState(initialUserInput);
-  
-  function handleChange(e) {
-    const inputName = e.target.getAttribute("name");
-    const displayValue = e.target.value; // What the user sees
-    const calculationValue = displayValue === "" ? 0 : parseFloat(displayValue); // The internal input value
-
-    // Update local component state (for display)
-    setInputValues((prevInputValues) => {
-      return { ...prevInputValues, [inputName]: displayValue };
-    });
-
-    // Only pass numeric value when there's actually a value
-    onInputValueChange(inputName, calculationValue);
-  }
-
+export default function UserInputs({ inputs, onChange }) {  
   return (
-    <div id="user-input">
+    <section id="user-input">
       <div className="input-group">
         <Input
           name="initialInvestment"
           label="Initial Investment"
-          value={inputValues.initialInvestment}
+          value={inputs.initialInvestment}
           minValue="0"
-          onInputChange={handleChange}
+          onChange={onChange}
         />
         <Input
           name="annualInvestment"
           label="Annual Investment"
-          value={inputValues.annualInvestment}
+          value={inputs.annualInvestment}
           minValue="0"
-          onInputChange={handleChange}
+          onChange={onChange}
         />
       </div>
       <div className="input-group">
         <Input
           name="expectedReturn"
           label="Expected Return"
-          value={inputValues.expectedReturn}
+          value={inputs.expectedReturn}
           minValue="0"
-          onInputChange={handleChange}
+          onChange={onChange}
         />
         <Input
           name="duration"
           label="Duration"
-          value={inputValues.duration}
+          value={inputs.duration}
           minValue="1"
-          onInputChange={handleChange}
+          onChange={onChange}
         />
       </div>
-    </div>
+    </section>
   );
 }

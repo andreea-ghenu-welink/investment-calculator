@@ -73,7 +73,7 @@ body {
 
 #result {
   max-width: 50rem;
-  margin: 2rem auto;
+  margin: 3rem auto 2rem;
   padding: 1rem;
   table-layout: fixed;
   border-spacing: 1rem;
@@ -93,4 +93,9 @@ body {
 
 .center {
   text-align: center;
+}
+
+.error-message {
+  font-weight: 600;
+  color: rgba(250, 16, 16, 0.815);
 }

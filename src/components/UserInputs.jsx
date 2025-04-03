@@ -3,11 +3,11 @@ import Input from "./Input";
 
 export default function UserInputs({ initialUserInput, onInputValueChange }) {
   const [inputValues, setInputValues] = useState(initialUserInput);
-
+  
   function handleChange(e) {
     const inputName = e.target.getAttribute("name");
     const displayValue = e.target.value; // What the user sees
-    const calculationValue = displayValue === "" ? 0 : parseFloat(displayValue);
+    const calculationValue = displayValue === "" ? 0 : parseFloat(displayValue); // The internal input value
 
     // Update local component state (for display)
     setInputValues((prevInputValues) => {

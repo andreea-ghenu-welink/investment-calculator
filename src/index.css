@@ -66,6 +66,11 @@ body {
   font-size: 1rem;
 }
 
+#user-input .invalid-input {
+  border-color: rgba(176, 8, 8, 0.815);
+}
+
+
 #result {
   max-width: 50rem;
   margin: 2rem auto;

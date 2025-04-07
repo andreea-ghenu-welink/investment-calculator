@@ -21,7 +21,7 @@ export default function Input({ name, value, label, minValue, onChange }) {
     setWasCleared(newValue === "")
 
     // Extract and parse the value here
-    const inputValue = newValue === "" ? 0 : parseFloat(newValue);
+    const inputValue = +newValue;
     
     // Pass the name and parsed value directly
     onChange(name, inputValue);

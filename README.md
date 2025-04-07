@@ -1,12 +1,64 @@
-# React + Vite
+# Investment Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application that helps users calculate investment returns based on different parameters.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+```
 
-## Expanding the ESLint configuration
+## Usage
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Development Server
+
+To run the development server:
+
+```bash
+npm run dev
+```
+
+This will start the Vite development server with hot module replacement.
+
+### Building for Production
+
+To build the project for production:
+
+```bash
+npm run build
+```
+
+The built assets will be available in the `dist` directory.
+
+### Linting
+
+To lint the codebase:
+
+```bash
+npm run lint
+```
+
+### Preview Production Build
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Technologies Used
+
+- React 19
+- JavaScript
+- Vite
+- ESLint
+
+## Project Structure
+
+- `src/` - Source code
+  - `components/` - React components
+  - `assets/` - Static assets
+
+## License
+
+MIT

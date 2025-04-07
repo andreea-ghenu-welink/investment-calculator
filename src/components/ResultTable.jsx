@@ -31,25 +31,25 @@ export default function ResultTable({inputs}) {
     </tr>
   ));
 
-  const generalErrorMessage = <p className="center error-message">Invalid input! Please enter a positive number.</p>;
-  const durationErrorMessage = <p className="center error-message">Invalid duration! Duration must be greater than zero.</p>;
+  const generalErrorMessage = <p className="text-center font-semibold text-red-500">Invalid input! Please enter a positive number.</p>;
+  const durationErrorMessage = <p className="text-center font-semibold text-red-500">Invalid duration! Duration must be greater than zero.</p>;
 
   return (
     <section className="result-section">
       {!allInputsValid && !isDurationValid && durationErrorMessage}
       {!allInputsValid && isDurationValid && generalErrorMessage}
       {allInputsValid && (
-        <table id="result">
-          <thead>
+        <table id="result" className="table-fixed border-separate border-spacing-4 max-w-[50rem] mx-auto mt-12 mb-8 p-4 text-right">
+          <thead className="text-[#83e6c0] mb-8">
             <tr>
               <th>Year</th>
               <th>Investment Value</th>
-              <th>Interest(Year)</th>
+              <th>Interest (Year)</th>
               <th>Total Interest</th>
               <th>Invested Capital</th>
             </tr>
           </thead>
-          <tbody>{resultList}</tbody>
+          <tbody className="font-mono text-[#c2e9e0]">{resultList}</tbody>
         </table>)}
     </section>
   );

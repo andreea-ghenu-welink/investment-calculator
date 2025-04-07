@@ -2,8 +2,8 @@ import Input from "./Input";
 
 export default function UserInputs({ inputs, onChange }) {  
   return (
-    <section id="user-input">
-      <div className="input-group">
+    <section className="flex flex-col gap-y-4 px-4 py-6 max-w-[30rem] mx-auto my-8 rounded-md bg-gradient-to-b from-[#307e6c] to-[#2b996d]">
+      <div className="flex justify-evenly gap-x-4">
         <Input
           name="initialInvestment"
           label="Initial Investment"
@@ -19,7 +19,7 @@ export default function UserInputs({ inputs, onChange }) {
           onChange={onChange}
         />
       </div>
-      <div className="input-group">
+      <div className="flex justify-evenly gap-x-4">
         <Input
           name="expectedReturn"
           label="Expected Return"

@@ -31,11 +31,11 @@ export default function Input({ name, value, label, minValue, onChange }) {
 
   return (
     <div>
-      <label htmlFor={name} className="label"> 
+      <label htmlFor={name} className={`${isInputValid ? "" : "text-red-800"} block mb-1 text-sm font-mono font-bold uppercase`}> 
         {label}
       </label>
       <input
-        className={`input ${isInputValid ? "" : "invalid-input"}`}
+        className={`${isInputValid ? "border-[#76c0ae] " : "border-red-800 text-red-800"} | w-full p-2 border-2 font-medium rounded-sm bg-transparent text-base text-[#c2e9e0]`}
         id={name}
         type="number"
         min={minValue}
